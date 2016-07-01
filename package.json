@@ -1,0 +1,51 @@
+{
+  "name": "liyu",
+  "version": "0.0.0",
+  "description": "Urban dictionary in command line.",
+  "license": "MIT",
+  "repository": "egoist/liyu",
+  "author": {
+    "name": "EGOIST",
+    "email": "0x142857@gmail.com",
+    "url": "github.com/egoist"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "xo lib/* && ava test/test.js"
+  },
+  "bin": {
+    "liyu": "cli.js",
+    "ly": "cli.js",
+    "urban": "cli.js"
+  },
+  "files": [
+    "cli.js",
+    "lib"
+  ],
+  "keywords": [
+    "urban"
+  ],
+  "devDependencies": {
+    "ava": "latest",
+    "xo": "latest"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2,
+    "esnext": true,
+    "rules": {
+      "curly": ["error", "multi"]
+    }
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "colorful": "^2.1.0",
+    "figures": "^1.7.0",
+    "io-spin": "^0.3.0",
+    "meow": "^3.7.0",
+    "node-fetch": "^1.5.3"
+  }
+}
