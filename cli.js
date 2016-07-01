@@ -2,6 +2,7 @@
 'use strict'
 const meow = require('meow')
 const Spin = require('io-spin')
+const update = require('update-notifier')
 require('colorful').toxic()
 const main = require('./lib')
 const print = require('./lib/print')
@@ -22,6 +23,8 @@ const cli = meow(`
     l: 'limit'
   }
 })
+
+update({pkg: cli.pkg}).notify()
 
 const word = cli.input.join(' ')
 if (!word) return cli.showHelp()

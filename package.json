@@ -37,7 +37,10 @@
     "space": 2,
     "esnext": true,
     "rules": {
-      "curly": ["error", "multi"]
+      "curly": [
+        "error",
+        "multi"
+      ]
     }
   },
   "dependencies": {
@@ -46,6 +49,7 @@
     "figures": "^1.7.0",
     "io-spin": "^0.3.0",
     "meow": "^3.7.0",
-    "node-fetch": "^1.5.3"
+    "node-fetch": "^1.5.3",
+    "update-notifier": "^1.0.2"
   }
 }
