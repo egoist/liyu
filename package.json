@@ -44,7 +44,6 @@
     }
   },
   "dependencies": {
-    "co": "^4.6.0",
     "colorful": "^2.1.0",
     "figures": "^1.7.0",
     "io-spin": "^0.3.0",
