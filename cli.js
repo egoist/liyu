@@ -2,6 +2,7 @@
 'use strict'
 const meow = require('meow')
 const Spin = require('io-spin')
+const figures = require('figures')
 const update = require('update-notifier')
 require('colorful').toxic()
 const main = require('./lib')
@@ -35,7 +36,14 @@ say(word)
 main(word, cli.flags)
   .then(data => {
     spin.stop()
-    print(data)
+    if (data.length === 0) {
+      console.log(
+        `${figures.cross} There aren't any definitions for ${word} yet.`.red +
+        `\nCan you define it? ${`http://www.urbandictionary.com/`.underline}`.gray
+      )
+    } else {
+      print(data)
+    }
   })
   .catch(e => {
     spin.stop()
