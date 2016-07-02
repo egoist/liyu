@@ -27,7 +27,7 @@ const cli = meow(`
 update({pkg: cli.pkg}).notify()
 
 const word = cli.input.join(' ')
-if (!word) return cli.showHelp()
+if (!word) cli.showHelp()
 
 const spin = new Spin('Box1')
 spin.start()
