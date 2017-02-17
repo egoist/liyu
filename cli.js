@@ -3,8 +3,8 @@
 const meow = require('meow')
 const Spin = require('io-spin')
 const figures = require('figures')
+const chalk = require('chalk')
 const update = require('update-notifier')
-require('colorful').toxic()
 const main = require('./lib')
 const print = require('./lib/print')
 const say = require('./lib/say')
@@ -38,8 +38,8 @@ main(word, cli.flags)
     spin.stop()
     if (data.length === 0) {
       console.log(
-        `${figures.cross} There aren't any definitions for ${word} yet.`.red +
-        `\nCan you define it? ${`http://www.urbandictionary.com/`.underline}`.gray
+        chalk.red(`${figures.cross} There aren't any definitions for ${word} yet.`) +
+        chalk.dim(`\nCan you define it? ${chalk.underline(`http://www.urbandictionary.com/`)}`)
       )
     } else {
       print(data)
